@@ -1,0 +1,38 @@
+using System;
+
+namespace LongFunctionExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Example of a long function
+            string[] words = { "apple", "banana", "orange", "grape", "kiwi" };
+
+            // Call the LongFunction
+            int result = LongFunction(words);
+
+            Console.WriteLine("Result: " + result);
+        }
+
+        static int LongFunction(string[] arr)
+        {
+            // Perform some complex operation with the input array
+            int sumLength = 0;
+
+            foreach (string word in arr)
+            {
+                if (word.Length > 5)
+                {
+                    sumLength += word.Length;
+                }
+                else
+                {
+                    sumLength -= word.Length;
+                }
+            }
+
+            return sumLength;
+        }
+    }
+}
